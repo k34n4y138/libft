@@ -6,7 +6,7 @@
 /*   By: zmoumen <zmoumen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:55:36 by zmoumen           #+#    #+#             */
-/*   Updated: 2023/01/30 11:49:46 by zmoumen          ###   ########.fr       */
+/*   Updated: 2023/01/30 12:11:25 by zmoumen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+char	*get_next_line(int fd);
+
 #endif
