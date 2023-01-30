@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_printf_fd.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmoumen <zmoumen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 18:53:28 by zmoumen           #+#    #+#             */
-/*   Updated: 2023/01/30 11:33:28 by zmoumen          ###   ########.fr       */
+/*   Created: 2022/10/27 16:41:56 by zmoumen           #+#    #+#             */
+/*   Updated: 2023/01/30 11:49:03 by zmoumen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_FD_H
+# define FT_PRINTF_FD_H
+# include <stdarg.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *newn)
-{
-	t_list	*last_obj;
+int		ft_printf_fd(int fd, const char *str, ...);
+char	*ctoa(int c);
+char	*ft_ultoa_base(unsigned long nb, char *base, char *prefix);
 
-	last_obj = ft_lstlast(*lst);
-	if (last_obj)
-		last_obj->next = newn;
-	else
-		*lst = newn;
-}
+#endif 
